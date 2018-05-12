@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <html class="no-js">
+    <!--<![endif]-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>机务段后台</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="lib/layui/css/layui.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="layui-layout-body">
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <div class="layui-layout layui-layout-admin">
+        <!-- 内容 -->
+        <div class="layui-header layui-bg-green">
+            <div class="layui-logo layui-bg-green">机务段前台系统</div>
+
+            <ul class="layui-nav layui-layout-left" lay-filter="nav">
+                <li class="layui-nav-item layui-this">
+                    <a target='myIframe' href="pages/homePage.html">首页</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a target='myIframe' href="pages/materials.html">学习资料</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">在线考试</a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a target='myIframe' href="pages/onlineTest/formalTest.html">正式考试</a>
+                        </dd>
+                        <dd>
+                            <a target='myIframe' href="pages/onlineTest/practiceTest.html">模拟考试</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a target='myIframe' href="pages/onlineTraining.html">在线培训</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">管理我的资料</a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a target='myIframe' href="pages/manage/baseInfo.html">基本信息</a>
+                        </dd>
+                        <dd>
+                            <a target='myIframe' href="pages/manage/accountManage.html">账户管理</a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 用户
+                    </a>
+                    <!-- <dl class="layui-nav-child">
+                        <dd>
+                            <a href="">基本资料</a>
+                        </dd>
+                        <dd>
+                            <a href="">安全设置</a>
+                        </dd>
+                    </dl> -->
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">退出</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="layui-body" style="left: 0;">
+            <!-- <span class="layui-breadcrumb">
+                <a href="/">首页</a>
+                <a href="/demo/">演示</a>
+                <a>
+                    <cite>导航元素</cite>
+                </a>
+            </span> -->
+
+            <!-- 内容主体区域 -->
+            <!-- <div class="layui-main"> -->
+            <div id="iframe_box">
+                <div class="loading"></div>
+                <div class="show-iframe">
+                    <iframe src="pages/homePage.html" name="myIframe"></iframe>
+                </div>
+            </div>
+        </div>
+</body>
+<script type="text/javascript" src="lib/layui/layui.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use('element', function() {
+        var element = layui.element;
+        var $ = layui.jquery;
+    });
+</script>
+
+
+</html>
